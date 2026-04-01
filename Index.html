@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Channel Marketing — Capabilities Overview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+  :root {
+    --ink: #2e2a24;
+    --ink-light: #5c5549;
+    --ink-muted: #918981;
+    --sand: #f6f3ef;
+    --sand-dark: #eae6e0;
+    --cream: #faf9f6;
+    --terra: #b5654a;
+    --terra-light: #e8cfc5;
+    --terra-bg: #fdf6f3;
+    --olive: #5e7a52;
+    --olive-light: #d4e3cf;
+    --olive-bg: #f4f8f2;
+    --warm-gold: #a08340;
+    --warm-gold-light: #ede3c8;
+    --warm-gold-bg: #fdf9f0;
+    --stone: #7a7568;
+    --stone-light: #d9d5ce;
+    --border: #e8e5df;
+    --card-bg: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    padding: 32px 16px;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    background: var(--card-bg);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(46,42,36,0.06);
+  }
+
+  /* Header */
+  .header {
+    background: var(--ink);
+    padding: 32px 36px;
+  }
+  .header-eyebrow {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--stone-light); margin-bottom: 8px;
+  }
+  .header-title {
+    font-size: 26px; font-weight: 700; color: #fff; line-height: 1.2;
+  }
+  .header-sub {
+    font-size: 14px; color: var(--stone-light); margin-top: 6px;
+  }
+
+  /* Sections */
+  .section-head {
+    font-size: 15px; font-weight: 600; color: var(--ink);
+    border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px;
+  }
+  .section-num {
+    display: inline-block; width: 22px; height: 22px; line-height: 22px;
+    text-align: center; border-radius: 6px;
+    background: var(--terra); color: #fff;
+    font-size: 11px; font-weight: 600; margin-right: 8px; vertical-align: middle;
+  }
+
+  .body { padding: 28px 36px; }
+  .body > p { font-size: 14px; line-height: 1.65; color: var(--ink-light); }
+  .body > p + p { margin-top: 10px; }
+  .body > p strong { color: var(--ink); }
+
+  /* Metric cards */
+  .metric-row { display: flex; gap: 10px; margin-top: 20px; }
+  .metric-card {
+    flex: 1; background: var(--sand); border-radius: 10px; padding: 16px 14px;
+  }
+  .metric-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); margin-bottom: 5px; }
+  .metric-value { font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1; }
+  .metric-note { font-size: 10px; color: var(--ink-muted); margin-top: 3px; }
+
+  /* Callout */
+  .callout {
+    background: var(--warm-gold-bg); border: 1px solid var(--warm-gold-light);
+    border-radius: 10px; padding: 18px 20px; margin-top: 20px;
+  }
+  .callout-title { font-size: 13px; font-weight: 600; color: var(--warm-gold); margin-bottom: 6px; }
+  .callout p { font-size: 13px; line-height: 1.6; color: #8a7035; }
+  .callout.green { background: var(--olive-bg); border-color: var(--olive-light); }
+  .callout.green .callout-title { color: var(--olive); }
+  .callout.green p { color: #4a6340; }
+  .callout.terra { background: var(--terra-bg); border-color: var(--terra-light); }
+  .callout.terra .callout-title { color: var(--terra); }
+  .callout.terra p { color: #9a5a40; }
+
+  /* Persona cards */
+  .persona-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 16px; }
+  .persona-card {
+    border: 1px solid var(--border); border-radius: 10px; padding: 20px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .persona-right { border-left: 1px solid var(--sand-dark); padding-left: 16px; }
+  .persona-badge {
+    display: inline-block; font-size: 9px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.5px; padding: 3px 10px; border-radius: 5px; margin-bottom: 8px;
+  }
+  .persona-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .persona-desc { font-size: 12px; color: var(--ink-muted); margin-top: 3px; line-height: 1.5; }
+  .persona-right-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--stone); margin-bottom: 6px; font-weight: 500; }
+  .persona-channels { list-style: none; padding: 0; }
+  .persona-channels li {
+    font-size: 12px; color: var(--ink-light); padding: 3px 0;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .ch-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+  /* Channel grid */
+  .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .channel-card { border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .channel-card.full { grid-column: 1 / -1; }
+  .channel-icon {
+    width: 28px; height: 28px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; color: #fff; font-weight: 700; margin-bottom: 8px;
+  }
+  .channel-name { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+  .channel-desc { font-size: 11px; line-height: 1.5; color: var(--ink-muted); }
+  .channel-tag {
+    display: inline-block; font-size: 8px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.4px; padding: 2px 7px; border-radius: 3px; margin-top: 8px;
+  }
+  .tag-awareness { background: var(--olive-light); color: var(--olive); }
+  .tag-conversion { background: var(--terra-light); color: var(--terra); }
+  .tag-retention { background: var(--warm-gold-light); color: var(--warm-gold); }
+  .tag-trust { background: var(--stone-light); color: var(--stone); }
+
+  /* Simple flow */
+  .simple-flow { background: var(--sand); border-radius: 10px; padding: 18px; margin-top: 16px; }
+  .flow-label { font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+  .flow-steps { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .flow-pill {
+    background: #fff; border: 1px solid var(--sand-dark); border-radius: 6px;
+    padding: 6px 12px; font-size: 11px; font-weight: 500; color: var(--ink-light);
+  }
+  .flow-pill.highlight { background: var(--terra); border-color: var(--terra); color: #fff; }
+  .flow-arrow { color: var(--stone-light); font-size: 13px; }
+
+  /* Timeline */
+  .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .timeline-card { border: 1px solid var(--border); border-radius: 10px; padding: 18px 16px; }
+  .timeline-step-num {
+    width: 24px; height: 24px; border-radius: 7px;
+    background: var(--terra); color: #fff;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
+  }
+  .timeline-card-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .timeline-card-desc { font-size: 11px; line-height: 1.55; color: var(--ink-muted); }
+  .timeline-card-tools { margin-top: 10px; }
+  .tool-pill {
+    display: inline-block; font-size: 9px; font-weight: 500;
+    background: var(--terra-bg); color: var(--terra);
+    padding: 3px 8px; border-radius: 4px; margin-right: 4px; margin-bottom: 4px;
+  }
+
+  /* Benefits */
+  .benefit-row { display: flex; gap: 12px; margin-top: 14px; }
+  .benefit-card { flex: 1; border-radius: 10px; padding: 20px 16px; text-align: center; }
+  .benefit-value { font-size: 22px; font-weight: 700; color: var(--ink); }
+  .benefit-sub { font-size: 10px; color: var(--ink-muted); margin-top: 2px; }
+  .benefit-label { font-size: 11px; color: var(--ink-muted); margin-top: 6px; line-height: 1.4; }
+
+  .benefit-list { list-style: none; padding: 0; margin-top: 16px; }
+  .benefit-list li {
+    font-size: 13px; line-height: 1.55; color: var(--ink-light);
+    padding: 10px 0; border-bottom: 1px solid var(--sand);
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .benefit-list li:last-child { border-bottom: none; }
+  .b-dot { flex-shrink: 0; width: 6px; height: 6px; background: var(--terra); border-radius: 50%; margin-top: 6px; }
+
+  /* Compare table */
+  .compare-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .compare-table th {
+    text-align: left; font-size: 9px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--ink-muted); padding: 8px 0; border-bottom: 1px solid var(--border); font-weight: 500;
+  }
+  .compare-table th:not(:first-child) { text-align: center; }
+  .compare-table td { font-size: 12px; padding: 10px 0; border-bottom: 1px solid var(--sand); color: var(--ink-light); }
+  .compare-table td:not(:first-child) { text-align: center; }
+  .compare-table .check { color: var(--olive); font-weight: 600; }
+  .compare-table .dash { color: var(--stone-light); }
+  .compare-table .partial { color: var(--warm-gold); font-size: 11px; }
+  .compare-table .row-label { font-weight: 500; color: var(--ink); }
+
+  /* Footer */
+  .footer {
+    background: var(--sand); border-top: 1px solid var(--border);
+    padding: 16px 36px; text-align: center;
+  }
+  .footer p { font-size: 11px; color: var(--ink-muted); }
+
+  /* Next steps */
+  .step-row { display: flex; gap: 12px; margin-bottom: 12px; }
+  .step-num {
+    flex-shrink: 0; width: 32px; height: 32px;
+    background: var(--terra-bg); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; color: var(--terra); font-size: 13px;
+  }
+  .step-title { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .step-desc { font-size: 11px; color: var(--ink-muted); margin-top: 2px; line-height: 1.5; }
+
+  /* Competitive */
+  .comp-row {
+    display: flex; align-items: center; padding: 12px 0;
+    border-bottom: 1px solid var(--sand); gap: 12px;
+  }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-rank { flex-shrink: 0; width: 14px; font-size: 10px; font-weight: 600; color: var(--ink-muted); text-align: right; }
+  .comp-info { flex: 1; min-width: 0; }
+  .comp-name-row { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .comp-type-row { font-size: 10px; color: var(--ink-muted); margin-top: 1px; }
+  .comp-rating { flex-shrink: 0; text-align: right; }
+  .comp-stars { font-size: 18px; font-weight: 700; color: var(--ink); line-height: 1; }
+  .comp-star-label { font-size: 9px; color: var(--ink-muted); margin-top: 2px; }
+  .comp-highlight {
+    background: var(--warm-gold-bg); border: 1px solid var(--warm-gold-light);
+    border-radius: 8px; margin: 0 -12px; padding: 12px;
+  }
+  .rating-bar-track { height: 6px; background: var(--sand-dark); border-radius: 3px; overflow: hidden; margin-top: 4px; }
+  .rating-bar-fill { height: 100%; border-radius: 3px; }
+
+  .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .swot-card { border-radius: 10px; padding: 14px; }
+  .swot-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 8px; }
+  .swot-item { font-size: 11px; line-height: 1.5; color: var(--ink-light); padding: 4px 0; display: flex; align-items: baseline; gap: 6px; }
+  .swot-dot { flex-shrink: 0; width: 5px; height: 5px; border-radius: 50%; margin-top: 5px; }
+
+  .opp-row { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--sand); align-items: flex-start; }
+  .opp-row:last-child { border-bottom: none; }
+  .opp-icon-box {
+    flex-shrink: 0; width: 28px; height: 28px; border-radius: 7px;
+    display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;
+  }
+  .opp-text { flex: 1; }
+  .opp-title-row { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .opp-desc-row { font-size: 11px; color: var(--ink-muted); margin-top: 2px; line-height: 1.5; }
+  .opp-channel-tag {
+    display: inline-block; font-size: 8px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.4px; padding: 2px 7px; border-radius: 3px; margin-top: 6px; margin-right: 3px;
+  }
+
+  /* Goals */
+  .goal-card {
+    border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px;
+    margin-bottom: 10px;
+  }
+  .goal-card-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+  }
+  .goal-num {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px;
+    background: var(--olive); color: #fff;
+    font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  }
+  .goal-title { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .goal-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.55; }
+  .goal-kpis { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .goal-kpi {
+    display: inline-block; font-size: 9px; font-weight: 500;
+    background: var(--olive-bg); color: var(--olive);
+    padding: 3px 8px; border-radius: 4px;
+  }
+
+  @media (max-width: 520px) {
+    .channel-grid, .timeline-grid, .swot-grid { grid-template-columns: 1fr; }
+    .metric-row, .benefit-row { flex-wrap: wrap; }
+    .metric-card, .benefit-card { min-width: 45%; }
+    .persona-card { grid-template-columns: 1fr; }
+    .persona-right { border-left: none; padding-left: 0; border-top: 1px solid var(--sand-dark); padding-top: 12px; }
+    .header, .body, .footer { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====================== PAGE 1 — COVER ====================== -->
+<div class="page">
+  <div class="header">
+    <div class="header-eyebrow">Capabilities Overview</div>
+    <div class="header-title">Multi-Channel Marketing<br>for Surgical Practices</div>
+    <div class="header-sub">Coordinated digital marketing that drives new patient volume</div>
+  </div>
+  <div class="body">
+    <p>Patients research online, compare providers, and make decisions <strong>before calling your office</strong>. Multi-channel marketing puts your practice in front of them at every step — and turns that visibility into booked consultations.</p>
+
+    <div class="metric-row">
+      <div class="metric-card">
+        <div class="metric-label">Patients start online</div>
+        <div class="metric-value">77%</div>
+        <div class="metric-note">begin with a search engine</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Research period</div>
+        <div class="metric-value">3–6 wk</div>
+        <div class="metric-note">before booking</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Touchpoints</div>
+        <div class="metric-value">7+</div>
+        <div class="metric-note">before a decision</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 22px;">
+      <div class="callout-title">What is multi-channel marketing?</div>
+      <p>Instead of one channel (like a Google ad), we coordinate search, social, email, ads, your website, SMS, and AI voice outreach — so patients see a consistent message everywhere. Each channel reinforces the others.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 2 — COMPETITIVE LANDSCAPE ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">1</span> Where Frisco Spine Stands Today</div>
+    <p>A quick look at the DFW spine surgery landscape — and where the biggest gaps and opportunities are.</p>
+
+    <div style="margin-top: 16px;">
+      <div style="font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 10px;">Patient ratings — DFW spine competitors</div>
+
+      <div class="comp-row">
+        <div class="comp-rank">1</div>
+        <div class="comp-info">
+          <div class="comp-name-row">Kalra Brain &amp; Spine</div>
+          <div class="comp-type-row">Neurosurgery · Frisco · Solo practice</div>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 98%; background: var(--olive);"></div></div>
+        </div>
+        <div class="comp-rating">
+          <div class="comp-stars">4.9</div>
+          <div class="comp-star-label">166+ reviews</div>
+        </div>
+      </div>
+
+      <div class="comp-row">
+        <div class="comp-rank">2</div>
+        <div class="comp-info">
+          <div class="comp-name-row">Dallas Neurosurgical &amp; Spine</div>
+          <div class="comp-type-row">Multi-physician group · Dallas/Frisco/Plano</div>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 98%; background: var(--olive);"></div></div>
+        </div>
+        <div class="comp-rating">
+          <div class="comp-stars">4.9</div>
+          <div class="comp-star-label">~53 reviews</div>
+        </div>
+      </div>
+
+      <div class="comp-row">
+        <div class="comp-rank">3</div>
+        <div class="comp-info">
+          <div class="comp-name-row">SW Scoliosis &amp; Spine Institute</div>
+          <div class="comp-type-row">Orthopedic spine · Dallas/Plano/Frisco</div>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 96%; background: #7a9a6e;"></div></div>
+        </div>
+        <div class="comp-rating">
+          <div class="comp-stars">4.8</div>
+          <div class="comp-star-label">100K+ patients</div>
+        </div>
+      </div>
+
+      <div class="comp-row comp-highlight">
+        <div class="comp-rank" style="color: var(--warm-gold); font-weight: 700;">—</div>
+        <div class="comp-info">
+          <div class="comp-name-row" style="color: #7a5c20;">Frisco Spine</div>
+          <div class="comp-type-row">Neurosurgery · Frisco · Multidisciplinary team</div>
+          <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 78%; background: var(--terra);"></div></div>
+        </div>
+        <div class="comp-rating">
+          <div class="comp-stars" style="color: var(--terra);">3.9</div>
+          <div class="comp-star-label">~83 reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swot-grid" style="margin-top: 22px;">
+      <div class="swot-card" style="background: var(--olive-bg);">
+        <div class="swot-label" style="color: var(--olive);">Strengths</div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Elite credentials (Cedars-Sinai, MD Anderson)</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Spanish-speaking physician — unique in DFW</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Saturday hours (no competitor offers this)</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Free surgery community program</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Conservative-first philosophy</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--olive);"></span><span>Multi-provider team at one location</span></div>
+      </div>
+      <div class="swot-card" style="background: var(--terra-bg);">
+        <div class="swot-label" style="color: var(--terra);">Weaknesses</div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>Review rating gap (3.9 vs. 4.9 for top competitor)</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>Wait time complaints in reviews</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>Callback/follow-up responsiveness</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>No major awards or peer-voted recognition</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>Website and SEO underinvested</span></div>
+        <div class="swot-item"><span class="swot-dot" style="background: var(--terra);"></span><span>Key differentiators are undermarketed</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 3 — OPPORTUNITIES ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">2</span> Opportunities</div>
+    <p>Every weakness above has a marketing-side lever. Here's how coordinated channels directly address the biggest gaps.</p>
+
+    <div style="margin-top: 14px;">
+      <div class="opp-row">
+        <div class="opp-icon-box" style="background: var(--warm-gold-light); color: var(--warm-gold);">01</div>
+        <div class="opp-text">
+          <div class="opp-title-row">Close the review gap</div>
+          <div class="opp-desc-row">Automated post-visit review requests via SMS and email. A consistent system can move a 3.9 toward 4.5+ within 6–12 months.</div>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">SMS</span>
+          <span class="opp-channel-tag" style="background: var(--warm-gold-light); color: var(--warm-gold);">Email</span>
+          <span class="opp-channel-tag" style="background: var(--stone-light); color: var(--stone);">Reputation</span>
+        </div>
+      </div>
+      <div class="opp-row">
+        <div class="opp-icon-box" style="background: var(--olive-light); color: var(--olive);">02</div>
+        <div class="opp-text">
+          <div class="opp-title-row">Win the search battle</div>
+          <div class="opp-desc-row">Condition-specific landing pages and blog content so Frisco Spine ranks for procedure searches and symptom queries.</div>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">SEO</span>
+          <span class="opp-channel-tag" style="background: var(--terra-light); color: var(--terra);">Web</span>
+        </div>
+      </div>
+      <div class="opp-row">
+        <div class="opp-icon-box" style="background: var(--terra-light); color: var(--terra);">03</div>
+        <div class="opp-text">
+          <div class="opp-title-row">Fix speed to lead</div>
+          <div class="opp-desc-row">AI voice + SMS follow-up within minutes of a web inquiry. Directly addresses responsiveness complaints and beats competitors.</div>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">AI Voice</span>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">SMS</span>
+        </div>
+      </div>
+      <div class="opp-row">
+        <div class="opp-icon-box" style="background: var(--stone-light); color: var(--stone);">04</div>
+        <div class="opp-text">
+          <div class="opp-title-row">Market what's already special</div>
+          <div class="opp-desc-row">Bilingual care, Saturday hours, and the free surgery program are real differentiators — patients just don't know about them yet.</div>
+          <span class="opp-channel-tag" style="background: var(--terra-light); color: var(--terra);">Social</span>
+          <span class="opp-channel-tag" style="background: var(--terra-light); color: var(--terra);">Ads</span>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">Web</span>
+        </div>
+      </div>
+      <div class="opp-row">
+        <div class="opp-icon-box" style="background: var(--warm-gold-light); color: var(--warm-gold);">05</div>
+        <div class="opp-text">
+          <div class="opp-title-row">Re-engage lapsed leads &amp; patients</div>
+          <div class="opp-desc-row">Email sequences and retargeting ads bring back patients who didn't book — or past patients overdue for follow-up.</div>
+          <span class="opp-channel-tag" style="background: var(--warm-gold-light); color: var(--warm-gold);">Email</span>
+          <span class="opp-channel-tag" style="background: var(--terra-light); color: var(--terra);">Retargeting</span>
+          <span class="opp-channel-tag" style="background: var(--olive-light); color: var(--olive);">SMS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout green" style="margin-top: 18px;">
+      <div class="callout-title">The quick assessment</div>
+      <p>Frisco Spine has strong differentiators that no competitor can match — but they're invisible online. The review gap, limited SEO presence, and undermarketed strengths are all fixable with the right channels running. The foundation is excellent. The marketing needs to catch up.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 4 — GOALS & OBJECTIVES ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">3</span> Goals &amp; Objectives</div>
+    <p>Based on the competitive landscape, here's what we're working toward — and how we'll measure progress.</p>
+
+    <div style="margin-top: 14px; padding: 16px 18px; background: var(--sand); border-radius: 10px; margin-bottom: 16px;">
+      <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); margin-bottom: 6px;">Primary purpose</div>
+      <div style="font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.4;">Increase new patient consultation volume through consistent, multi-channel digital presence — while strengthening Frisco Spine's online reputation and visibility against established DFW competitors.</div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-card-header">
+        <div class="goal-num">1</div>
+        <div class="goal-title">Grow new patient leads</div>
+      </div>
+      <div class="goal-desc">Increase inbound consultation requests from online sources — search, ads, social, and website — creating a predictable pipeline that doesn't depend on referrals alone.</div>
+      <div class="goal-kpis">
+        <span class="goal-kpi">Web form submissions</span>
+        <span class="goal-kpi">Phone calls from ads</span>
+        <span class="goal-kpi">Cost per lead</span>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-card-header">
+        <div class="goal-num">2</div>
+        <div class="goal-title">Close the review gap</div>
+      </div>
+      <div class="goal-desc">Systematically increase Google review volume and rating through automated post-visit requests. Target: move from 3.9 toward 4.5+ within the first year.</div>
+      <div class="goal-kpis">
+        <span class="goal-kpi">Google rating</span>
+        <span class="goal-kpi">Review volume</span>
+        <span class="goal-kpi">Review response rate</span>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-card-header">
+        <div class="goal-num">3</div>
+        <div class="goal-title">Own local search visibility</div>
+      </div>
+      <div class="goal-desc">Rank on page one for high-intent searches — procedure terms, "spine surgeon Frisco TX," and condition-based queries — so patients find Frisco Spine before competitors.</div>
+      <div class="goal-kpis">
+        <span class="goal-kpi">Organic search traffic</span>
+        <span class="goal-kpi">Keyword rankings</span>
+        <span class="goal-kpi">Google Maps position</span>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-card-header">
+        <div class="goal-num">4</div>
+        <div class="goal-title">Convert faster with AI follow-up</div>
+      </div>
+      <div class="goal-desc">Reduce lead response time from hours/days to minutes using AI voice and SMS. Speed to response is the single biggest lever for turning inquiries into booked consultations.</div>
+      <div class="goal-kpis">
+        <span class="goal-kpi">Avg response time</span>
+        <span class="goal-kpi">Lead-to-consultation rate</span>
+        <span class="goal-kpi">Booked consultations</span>
+      </div>
+    </div>
+
+    <div class="goal-card">
+      <div class="goal-card-header">
+        <div class="goal-num">5</div>
+        <div class="goal-title">Differentiate in the market</div>
+      </div>
+      <div class="goal-desc">Make Frisco Spine's unique strengths — bilingual care, Saturday availability, free surgery program, multidisciplinary team — visible and prominent across all channels.</div>
+      <div class="goal-kpis">
+        <span class="goal-kpi">Social engagement</span>
+        <span class="goal-kpi">Website traffic</span>
+        <span class="goal-kpi">Brand searches</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====================== PAGE 5 — PATIENT PERSONAS ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">4</span> Who We're Reaching</div>
+    <p>Different patients need different approaches. Here are three types we target — each with their own engagement strategy.</p>
+
+    <div class="persona-grid">
+      <div class="persona-card" style="border-left: 3px solid var(--terra);">
+        <div class="persona-left">
+          <div class="persona-badge" style="background: var(--terra-light); color: var(--terra);">New Patient</div>
+          <div class="persona-name">The Researcher</div>
+          <div class="persona-desc">Has a condition or pain point. Actively searching online. Comparing providers, reading reviews, checking credentials. Hasn't contacted anyone yet.</div>
+        </div>
+        <div class="persona-right">
+          <div class="persona-right-label">How we engage</div>
+          <ul class="persona-channels">
+            <li><span class="ch-dot" style="background: var(--olive);"></span> SEO content for their searches</li>
+            <li><span class="ch-dot" style="background: var(--terra);"></span> Google &amp; social ads</li>
+            <li><span class="ch-dot" style="background: var(--stone);"></span> Landing page → consultation form</li>
+            <li><span class="ch-dot" style="background: var(--olive);"></span> AI voice/SMS follow-up in minutes</li>
+            <li><span class="ch-dot" style="background: var(--warm-gold);"></span> Email nurture if not ready yet</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="persona-card" style="border-left: 3px solid var(--olive);">
+        <div class="persona-left">
+          <div class="persona-badge" style="background: var(--olive-light); color: var(--olive);">Referred Patient</div>
+          <div class="persona-name">The Referral</div>
+          <div class="persona-desc">Sent by their PCP or another provider. Has intent but still validates online — checks your website, reads reviews, looks at social profiles before calling.</div>
+        </div>
+        <div class="persona-right">
+          <div class="persona-right-label">How we engage</div>
+          <ul class="persona-channels">
+            <li><span class="ch-dot" style="background: var(--stone);"></span> Strong review profile (Google, Healthgrades)</li>
+            <li><span class="ch-dot" style="background: var(--terra);"></span> Professional website &amp; provider pages</li>
+            <li><span class="ch-dot" style="background: var(--terra);"></span> Active social media presence</li>
+            <li><span class="ch-dot" style="background: var(--warm-gold);"></span> Referring physician email updates</li>
+            <li><span class="ch-dot" style="background: var(--olive);"></span> SMS appointment reminders</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="persona-card" style="border-left: 3px solid var(--warm-gold);">
+        <div class="persona-left">
+          <div class="persona-badge" style="background: var(--warm-gold-light); color: var(--warm-gold);">Existing Lead</div>
+          <div class="persona-name">The Undecided</div>
+          <div class="persona-desc">Visited your site, downloaded a guide, or started a form — but didn't book. Or: a past patient who hasn't returned for a recommended follow-up.</div>
+        </div>
+        <div class="persona-right">
+          <div class="persona-right-label">How we engage</div>
+          <ul class="persona-channels">
+            <li><span class="ch-dot" style="background: var(--warm-gold);"></span> Email re-engagement sequences</li>
+            <li><span class="ch-dot" style="background: var(--olive);"></span> SMS/voice check-in outreach</li>
+            <li><span class="ch-dot" style="background: var(--terra);"></span> Retargeting ads on social &amp; web</li>
+            <li><span class="ch-dot" style="background: var(--terra);"></span> Educational social content</li>
+            <li><span class="ch-dot" style="background: var(--stone);"></span> Patient success stories &amp; reviews</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 6 — CHANNELS ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">5</span> The Channels</div>
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-icon" style="background: var(--olive);">S</div>
+        <div class="channel-name">Search (SEO)</div>
+        <div class="channel-desc">Show up when patients search for procedures and providers in your area. Compounds over time.</div>
+        <span class="channel-tag tag-awareness">Awareness</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon" style="background: var(--terra);">A</div>
+        <div class="channel-name">Paid Ads</div>
+        <div class="channel-desc">Google &amp; social ads for immediate visibility. Target patients actively searching right now.</div>
+        <span class="channel-tag tag-conversion">Conversion</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon" style="background: var(--stone);">W</div>
+        <div class="channel-name">Website &amp; Landing Pages</div>
+        <div class="channel-desc">Every channel drives here. Optimized pages turn visitors into consultation requests.</div>
+        <span class="channel-tag tag-conversion">Conversion</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon" style="background: var(--warm-gold);">E</div>
+        <div class="channel-name">Email (Warm &amp; Cold)</div>
+        <div class="channel-desc">Nurture interested leads. Re-engage lapsed patients. Update referring physicians.</div>
+        <span class="channel-tag tag-retention">Nurture</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon" style="background: #8a6550;">So</div>
+        <div class="channel-name">Social Media</div>
+        <div class="channel-desc">Consistent posts build the "I've seen this doctor everywhere" effect that drives trust.</div>
+        <span class="channel-tag tag-trust">Trust</span>
+      </div>
+      <div class="channel-card">
+        <div class="channel-icon" style="background: #5e7a52;">V</div>
+        <div class="channel-name">AI Voice &amp; SMS</div>
+        <div class="channel-desc">Follow up with web leads in minutes — not hours. Qualify, answer questions, and book consultations.</div>
+        <span class="channel-tag tag-conversion">Speed to Lead</span>
+      </div>
+      <div class="channel-card full">
+        <div class="channel-icon" style="background: var(--ink);">R</div>
+        <div class="channel-name">Reputation &amp; Reviews</div>
+        <div class="channel-desc">Automated review requests, monitoring, and response management. For surgeons, a strong review profile is often the deciding factor. Amplifies every other channel.</div>
+        <span class="channel-tag tag-trust">Trust</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 7 — HOW THEY WORK TOGETHER ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">6</span> How It Works Together</div>
+    <p>No single channel converts alone. Here's what real patient paths look like when everything is coordinated.</p>
+
+    <div class="simple-flow" style="margin-top: 18px;">
+      <div class="flow-label" style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--terra); border-radius: 50%;"></span>
+        The Researcher — new patient searching online
+      </div>
+      <div class="flow-steps">
+        <span class="flow-pill">Searches Google</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Finds your blog post</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Sees retargeting ad</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Fills out form</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill highlight">AI calls in 2 min</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill highlight">Consultation booked</span>
+      </div>
+    </div>
+
+    <div class="simple-flow">
+      <div class="flow-label" style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--olive); border-radius: 50%;"></span>
+        The Referral — sent by their PCP
+      </div>
+      <div class="flow-steps">
+        <span class="flow-pill">Gets referral</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Googles your name</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Sees 4.8+ reviews</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Checks your social</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill highlight">Calls your office</span>
+      </div>
+    </div>
+
+    <div class="simple-flow">
+      <div class="flow-label" style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 8px; height: 8px; background: var(--warm-gold); border-radius: 50%;"></span>
+        The Undecided — visited but didn't book
+      </div>
+      <div class="flow-steps">
+        <span class="flow-pill">Left your site</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Gets email with patient story</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill">Sees your ad again</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill highlight">SMS check-in</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-pill highlight">Books consultation</span>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 20px;">
+      <div class="callout-title">The multiplier effect</div>
+      <p>Each channel reinforces the others. SEO builds awareness. Ads re-engage. Email nurtures. Social builds trust. AI voice/SMS prevents missed leads. Reviews seal the decision. Together, they create a path no single channel can achieve alone.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 8 — OUR APPROACH ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">7</span> Our Approach</div>
+    <p>We use a proven four-phase process powered by our automation platform.</p>
+
+    <div class="timeline-grid" style="margin-top: 16px;">
+      <div class="timeline-card">
+        <div class="timeline-step-num">1</div>
+        <div class="timeline-card-title">Plan</div>
+        <div class="timeline-card-desc">Define your ideal patient types (ICPs), build messaging for each, and map out a content calendar across all channels.</div>
+        <div class="timeline-card-tools">
+          <span class="tool-pill">ICP Builder</span>
+          <span class="tool-pill">Content Calendar</span>
+          <span class="tool-pill">Channel Strategy</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-step-num">2</div>
+        <div class="timeline-card-title">Prioritize</div>
+        <div class="timeline-card-desc">Identify highest-impact channels for your practice. Focus budget and effort where patient intent is strongest.</div>
+        <div class="timeline-card-tools">
+          <span class="tool-pill">Channel Scoring</span>
+          <span class="tool-pill">Budget Allocation</span>
+          <span class="tool-pill">Audience Targeting</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-step-num">3</div>
+        <div class="timeline-card-title">Launch</div>
+        <div class="timeline-card-desc">Deploy campaigns across all active channels simultaneously. AI generates content, ads go live, email sequences activate.</div>
+        <div class="timeline-card-tools">
+          <span class="tool-pill">AI Content Gen</span>
+          <span class="tool-pill">Ad Deployment</span>
+          <span class="tool-pill">Email Automation</span>
+          <span class="tool-pill">Voice/SMS Setup</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-step-num">4</div>
+        <div class="timeline-card-title">Monitor &amp; Report</div>
+        <div class="timeline-card-desc">Track leads, cost per lead, channel performance, and consultation bookings. Monthly reports show exactly what's working.</div>
+        <div class="timeline-card-tools">
+          <span class="tool-pill">Analytics Dashboard</span>
+          <span class="tool-pill">Lead Tracking</span>
+          <span class="tool-pill">Monthly Reports</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout green" style="margin-top: 18px;">
+      <div class="callout-title">Continuous optimization</div>
+      <p>This isn't set-it-and-forget-it. Each month we review performance data, reallocate spend to what's working, test new creative, and refine targeting — so results compound over time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== PAGE 9 — WHY AUTOMATE ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">8</span> Why Automation Matters for Practices</div>
+    <p>Surgeons and practice managers don't have 10+ hours a week for marketing. Automation changes the equation.</p>
+
+    <div class="benefit-row" style="margin-top: 16px;">
+      <div class="benefit-card" style="background: var(--terra-bg); border: 1px solid var(--terra-light);">
+        <div class="benefit-value">&lt;1 hr/wk</div>
+        <div class="benefit-sub">your time required</div>
+        <div class="benefit-label">vs. 10+ hrs doing it manually</div>
+      </div>
+      <div class="benefit-card" style="background: var(--olive-bg); border: 1px solid var(--olive-light);">
+        <div class="benefit-value">50–70%</div>
+        <div class="benefit-sub">less than agency cost</div>
+        <div class="benefit-label">same multi-channel coverage</div>
+      </div>
+      <div class="benefit-card" style="background: var(--warm-gold-bg); border: 1px solid var(--warm-gold-light);">
+        <div class="benefit-value">Repeatable</div>
+        <div class="benefit-sub">consistent pipeline</div>
+        <div class="benefit-label">not dependent on one person</div>
+      </div>
+    </div>
+
+    <ul class="benefit-list" style="margin-top: 20px;">
+      <li><span class="b-dot"></span><span><strong>Lower cost per lead, lower cost per patient.</strong> As SEO and organic channels mature, your blended acquisition cost drops. Paid ads get more efficient with better data.</span></li>
+      <li><span class="b-dot"></span><span><strong>Speed to lead = more conversions.</strong> AI voice and SMS follow up within minutes — not hours or days. Response speed is the #1 predictor of whether a lead becomes a patient.</span></li>
+      <li><span class="b-dot"></span><span><strong>Platform-based, not person-based.</strong> If a marketing coordinator leaves, your campaigns don't stop. Everything runs on the platform.</span></li>
+      <li><span class="b-dot"></span><span><strong>Full visibility.</strong> Monthly reports show exactly where leads come from, what they cost, and which channels convert. No black-box agency guesswork.</span></li>
+      <li><span class="b-dot"></span><span><strong>Compounds over time.</strong> Month 1 builds the foundation. By month 6, SEO traffic grows, retargeting pools expand, review profiles strengthen — every channel feeds the others.</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ====================== PAGE 10 — COMPARISON ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">9</span> This Approach vs. Typical</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th style="width: 44%;">Capability</th>
+          <th>Typical Practice</th>
+          <th>Our Approach</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="row-label">SEO / search visibility</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Paid ads (Google + social)</td><td class="partial">Sometimes</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Optimized landing pages</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Email nurture sequences</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Consistent social media</td><td class="partial">Sporadic</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">AI voice + SMS follow-up</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Review generation</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Channels coordinated</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Monthly performance reports</td><td class="dash">—</td><td class="check">&#10003;</td></tr>
+        <tr><td class="row-label">Time required from you</td><td style="color: var(--terra); font-size: 11px;">10+ hrs/wk</td><td style="color: var(--olive); font-weight: 600; font-size: 11px;">&lt;1 hr/wk</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ====================== PAGE 11 — NEXT STEPS ====================== -->
+<div class="page">
+  <div class="body">
+    <div class="section-head"><span class="section-num">10</span> Next Steps</div>
+    <div style="margin-top: 14px;">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Discovery call</div>
+          <div class="step-desc">30 minutes. We learn about your practice, goals, and patient types. No commitment.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Custom channel plan</div>
+          <div class="step-desc">We build a tailored strategy for your procedures, geography, and competitive landscape.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Launch &amp; report</div>
+          <div class="step-desc">We execute across all channels. You get transparent monthly reports — like this document.</div>
+        </div>
+      </div>
+    </div>
+    <div class="callout terra" style="margin-top: 16px;">
+      <div class="callout-title">No long-term lock-in</div>
+      <p>Month-to-month. If the numbers work, you'll want to keep going. If they don't, you'll know exactly why.</p>
+    </div>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--ink-light);">The best next step is a quick conversation to see if this makes sense for your practice.</p>
+  </div>
+  <div class="footer">
+    <p>Prepared for discussion purposes &nbsp;·&nbsp; Multi-Channel Marketing Capabilities</p>
+  </div>
+</div>
+
+</body>
+</html>
