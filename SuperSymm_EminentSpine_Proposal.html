@@ -982,6 +982,304 @@ hr.divider { border: none; border-top: 1px solid #d4ddd0; margin: 24px 0; }
   .hero-meta { gap: 20px; }
   .proposal-footer { padding: 18px 20px; }
 }
+
+/* ══════════════════════════════════════════
+   HOW IT ALL CONNECTS — DARK SECTION
+   Uses Eminent Spine confirmed dark system
+══════════════════════════════════════════ */
+
+/* Wrap for dark sections */
+.wrap-dark {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 52px 32px 80px;
+}
+
+/* Header */
+.connects-kicker {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #dfc484;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.connects-kicker::before { content: ''; width: 24px; height: 2px; background: #dfc484; }
+.connects-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 4vw, 48px); font-weight: 700; letter-spacing: -0.02em;
+  color: #0B2210; line-height: 1.1; margin-bottom: 14px;
+}
+.connects-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px; font-weight: 400; color: #4A5C4C;
+  max-width: 680px; line-height: 1.6; margin-bottom: 20px;
+}
+.connects-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px; color: #3D4F3F;
+  max-width: 680px; line-height: 1.7; margin-bottom: 44px;
+}
+
+/* Three channel cards */
+.ch3-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
+  margin-bottom: 48px;
+}
+@media(max-width:800px) { .ch3-grid { grid-template-columns: 1fr; } }
+.ch3-card {
+  background: #ffffff;
+  border: 1px solid #d4ddd0;
+  border-radius: 8px;
+  padding: 22px 20px;
+}
+.ch3-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.ch3-headline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px; font-weight: 600; color: #0B2210;
+  line-height: 1.25; margin-bottom: 10px;
+}
+.ch3-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px; color: #3D4F3F; line-height: 1.6; margin-bottom: 18px;
+}
+.ch3-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;
+  padding: 14px; background: #F0F4ED; border-radius: 4px;
+}
+.ch3-stat-n {
+  font-family: 'Manrope', sans-serif;
+  font-size: 34px; font-weight: 700; line-height: 1; margin-bottom: 4px;
+}
+.ch3-stat-l {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px; color: #4A5C4C; line-height: 1.4;
+}
+.ch3-limit {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; color: #3D4F3F; line-height: 1.6;
+  border-left: 2px solid #b2ceb2;
+  background: #F0F4ED;
+  border-radius: 0 4px 4px 0;
+  padding: 10px 12px;
+}
+.ch3-warn { color: #C9AF71; margin-right: 4px; }
+
+/* Integration effects */
+.int-section { margin-bottom: 48px; }
+.int-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #dfc484; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.int-label::before { content: ''; width: 24px; height: 2px; background: #dfc484; }
+.int-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 14px;
+}
+@media(max-width:800px) { .int-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:500px) { .int-grid { grid-template-columns: 1fr; } }
+.int-card {
+  background: #EBF4EE;
+  border: 1px solid #d4ddd0;
+  border-left: 3px solid #C9AF71;
+  border-radius: 0 6px 6px 0;
+  padding: 16px 16px;
+}
+.int-num {
+  font-family: 'Manrope', sans-serif;
+  font-size: 26px; font-weight: 700; color: #dfc484;
+  line-height: 1; margin-bottom: 6px;
+}
+.int-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13.5px; font-weight: 600; color: #1e3622; margin-bottom: 6px;
+}
+.int-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px; color: #3D4F3F; line-height: 1.6;
+}
+
+/* Journey section */
+.journey-section { margin-bottom: 48px; }
+.journey-section-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #dfc484; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 10px;
+}
+.journey-section-label::before { content: ''; width: 24px; height: 2px; background: #dfc484; }
+.journey-section-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; color: #6B7E6D; margin-bottom: 20px;
+}
+.journey-tabs {
+  display: flex; gap: 0;
+  border-bottom: 2px solid #d4ddd0;
+  margin-bottom: 0; overflow-x: auto; scrollbar-width: none;
+}
+.journey-tabs::-webkit-scrollbar { display: none; }
+.jtab-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #6B7E6D; background: none; border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 20px; cursor: pointer; white-space: nowrap;
+  transition: all 0.18s; margin-bottom: -1px;
+}
+.jtab-btn:hover { color: #0B2210; }
+.jtab-btn.active { color: #8B6914; border-bottom-color: #C9AF71; }
+.jtab-panel { display: none; background: #ffffff; border: 1px solid #d4ddd0; border-top: none; border-radius: 0 0 8px 8px; padding: 20px; }
+.jtab-panel.active { display: block; }
+.journey-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-style: italic; color: #6B7E6D;
+  margin-bottom: 16px;
+}
+.journey-table { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 13px; }
+.journey-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #b2ceb2; padding: 8px 12px; text-align: left;
+  border-bottom: 1px solid #4a7c59; background: #1e3622;
+}
+.journey-table th:first-child { border-radius: 4px 0 0 0; }
+.journey-table th:last-child { border-radius: 0 4px 0 0; }
+.journey-table td {
+  padding: 10px 12px; border-bottom: 1px solid #d4ddd0;
+  font-family: 'Inter', sans-serif; color: #3D4F3F; vertical-align: middle;
+}
+.journey-table tr:nth-child(odd) td { background: #ffffff; }
+.journey-table tr:nth-child(even) td { background: #F0F4ED; }
+.journey-table td:not(:first-child) { text-align: center; font-size: 15px; font-weight: 600; min-width: 80px; }
+.jc-strong { color: #b2ceb2 !important; }
+.jc-partial { color: #C9AF71 !important; }
+.jc-none { color: #434842 !important; }
+.journey-key {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px; color: #8d928a; margin-bottom: 16px; padding: 8px 0;
+}
+.journey-callout {
+  background: #EBF4EE;
+  border-left: 3px solid #C9AF71;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px; color: #1e3622; line-height: 1.65;
+}
+.journey-callout-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #4a7c59; margin-bottom: 6px;
+}
+
+/* Compound math */
+.compound-section { margin-bottom: 48px; }
+.compound-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #dfc484; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.compound-label::before { content: ''; width: 24px; height: 2px; background: #dfc484; }
+.compound-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:680px) { .compound-grid { grid-template-columns: 1fr; } }
+.compound-card { border-radius: 8px; padding: 22px 20px; }
+.compound-card-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.compound-card-headline {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px; font-weight: 600; color: #0B2210;
+  margin-bottom: 16px; line-height: 1.3;
+}
+.compound-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 13px; }
+.compound-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #4a7c59; padding: 7px 10px; text-align: left;
+  border-bottom: 1px solid #d4ddd0; background: #1e3622;
+}
+.compound-table td { padding: 9px 10px; border-bottom: 1px solid #d4ddd0; color: #3D4F3F; font-family: 'Inter', sans-serif; }
+.compound-table tfoot td { border-top: 2px solid #d4ddd0; border-bottom: none; padding-top: 10px; color: #0B2210; }
+.compound-footer {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px; font-style: italic; color: #6B7E6D; line-height: 1.5;
+}
+.compound-recommended {
+  position: absolute; top: -1px; right: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  background: #dfc484; color: #0B2210;
+  padding: 3px 10px; border-radius: 0 0 6px 6px;
+}
+
+/* Quick reference table */
+.qr-section { margin-bottom: 48px; }
+.qr-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #dfc484; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.qr-label::before { content: ''; width: 24px; height: 2px; background: #dfc484; }
+.qr-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 700px; }
+.qr-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #b2ceb2; padding: 9px 12px; text-align: left;
+  background: #1e3622; border-bottom: 1px solid #4a7c59;
+}
+.qr-table th:first-child { border-radius: 4px 0 0 0; }
+.qr-table th:last-child { border-radius: 0 4px 0 0; }
+.qr-table td {
+  padding: 9px 12px; border-bottom: 1px solid #d4ddd0;
+  color: #3D4F3F; font-family: 'Inter', sans-serif; vertical-align: top;
+}
+.qr-table tr:nth-child(odd) td { background: #ffffff; }
+.qr-table tr:nth-child(even) td { background: #F0F4ED; }
+.qr-highlight td { background: #D1E8D5 !important; }
+.qr-yes { color: #1e3622; font-weight: 600; }
+.qr-no { color: #9B7A1A; font-weight: 500; }
+
+/* SS badge for this section */
+.connects-ss-badge {
+  background: #22193B;
+  border: 1px solid rgba(103,80,164,0.4);
+  border-left: 3px solid #dfc484;
+  border-radius: 0 8px 8px 0;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+}
+.connects-ss-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.connects-ss-pre {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #b2ceb2; opacity: 0.7;
+}
+.connects-ss-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px; font-weight: 700; color: #D5F77C;
+}
+.connects-ss-badge p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px; color: rgba(255,255,255,0.78); line-height: 1.65; margin-bottom: 12px;
+}
+
+/* Sources line */
+.connects-sources {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-style: italic; color: #9E93B8;
+  line-height: 1.6; margin-top: 16px;
+}
+
+/* Tab background override for this section */
+#tab-connects { background: transparent; }
 </style>
 </head>
 <body>
@@ -1034,6 +1332,7 @@ hr.divider { border: none; border-top: 1px solid #d4ddd0; margin: 24px 0; }
     <button class="tab-btn" data-tab="overview">Overview</button>
     <button class="tab-btn" data-tab="market">Market</button>
     <button class="tab-btn" data-tab="personas">Personas</button>
+    <button class="tab-btn" data-tab="connects">Channel Strategy</button>
     <button class="tab-btn" data-tab="seo">SEO &amp; Content</button>
     <button class="tab-btn" data-tab="ads">Paid Media</button>
     <button class="tab-btn" data-tab="social">Social</button>
@@ -1592,6 +1891,373 @@ hr.divider { border: none; border-top: 1px solid #d4ddd0; margin: 24px 0; }
 
 </div>
 </div>
+
+<!-- ══════════════════════════════════════════════
+     HOW IT ALL CONNECTS
+══════════════════════════════════════════════ -->
+<div id="tab-connects" class="tab-panel">
+<div class="wrap">
+
+  <!-- 01 HEADER -->
+  <div class="connects-header">
+    <div class="connects-kicker">Section 04 — Demand Strategy</div>
+    <h1 class="connects-title">How it all connects</h1>
+    <p class="connects-sub">Why doing all three beats doing any one — and what the math looks like when paid ads, organic SEO, and social work as a system instead of in isolation.</p>
+    <p class="connects-body">Eminent Spine's buyers don't follow a straight line. A spine surgeon evaluating a new implant line, a 1099 rep deciding whether to carry it, an ASC administrator approving a new vendor — each moves through a research journey that spans weeks or months and touches multiple channels. Digital marketing that shows up in only one of those channels leaves entire stages unaddressed. Each channel here has a specific job. And each one makes the others measurably more effective.</p>
+  </div>
+
+  <!-- 02 THREE CHANNEL CARDS -->
+  <div class="ch3-grid">
+
+    <!-- Card 1: Paid Ads -->
+    <div class="ch3-card" style="border-top:3px solid #dfc484;">
+      <div class="ch3-label" style="color:#dfc484;">Paid Ads — Google + LinkedIn</div>
+      <div class="ch3-headline">Captures demand the day it launches</div>
+      <p class="ch3-body">Targets professional decision-makers by job title, company, and search intent — surgeons, ASC administrators, spine reps — with precision no other channel matches.</p>
+      <div class="ch3-stats">
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#dfc484;">113%</div>
+          <div class="ch3-stat-l">LinkedIn ROAS in 2025 — highest of any major platform</div>
+        </div>
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#dfc484;">277×</div>
+          <div class="ch3-stat-l">more effective than Facebook for B2B leads</div>
+        </div>
+      </div>
+      <div class="ch3-limit">
+        <span class="ch3-warn">⚠</span> Stops completely when budget stops. Without SEO credibility behind it, a rep who clicks the ad and searches the company name may find nothing convincing.
+      </div>
+    </div>
+
+    <!-- Card 2: Organic SEO -->
+    <div class="ch3-card" style="border-top:3px solid #b2ceb2;">
+      <div class="ch3-label" style="color:#b2ceb2;">Organic SEO — Clinical + Trade Authority</div>
+      <div class="ch3-headline">Owns the research phase — where decisions are actually made</div>
+      <p class="ch3-body">Surgeons and reps Google a manufacturer before they respond to any outreach. Content that doesn't exist at that moment means the evaluation ends before contact is made. B2B buyers consume 4.5 pieces of content before reaching out to a vendor.</p>
+      <div class="ch3-stats">
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#b2ceb2;">748%</div>
+          <div class="ch3-stat-l">average ROI for B2B SEO programs</div>
+        </div>
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#b2ceb2;">14.6%</div>
+          <div class="ch3-stat-l">lead close rate vs. 1.7% for outbound</div>
+        </div>
+      </div>
+      <div class="ch3-limit">
+        <span class="ch3-warn">⚠</span> Takes 4–9 months to produce meaningful traffic. Running SEO alone means zero leads during the ramp-up window — and slower ranking without social amplification.
+      </div>
+    </div>
+
+    <!-- Card 3: Social -->
+    <div class="ch3-card" style="border-top:3px solid #8d928a;">
+      <div class="ch3-label" style="color:#8d928a;">Social — LinkedIn Thought Leadership</div>
+      <div class="ch3-headline">Builds the audience that the other two channels convert</div>
+      <p class="ch3-body">Only 5% of B2B buyers are in-market at any given moment. Social media's job is to own mindshare in the other 95% — so that when a surgeon or rep becomes ready to evaluate, Eminent Spine is the name they already recognize and trust.</p>
+      <div class="ch3-stats">
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#c3c8bf;">44%</div>
+          <div class="ch3-stat-l">LinkedIn engagement growth YoY (2024)</div>
+        </div>
+        <div class="ch3-stat">
+          <div class="ch3-stat-n" style="color:#c3c8bf;">93%</div>
+          <div class="ch3-stat-l">of B2B marketers say video delivers strong ROI</div>
+        </div>
+      </div>
+      <div class="ch3-limit">
+        <span class="ch3-warn">⚠</span> Builds awareness but rarely converts directly. Engagement without a credible website and SEO foundation beneath it produces no distributor applications or trial requests.
+      </div>
+    </div>
+
+  </div><!-- /ch3-grid -->
+
+  <!-- 03 INTEGRATION EFFECTS -->
+  <div class="int-section">
+    <div class="int-label">The Six Effects of Channel Integration</div>
+    <div class="int-grid">
+
+      <div class="int-card">
+        <div class="int-num">01</div>
+        <div class="int-name">Dual SERP presence</div>
+        <div class="int-desc">Appearing in both paid and organic for the same search term produces ~47% more contacts than either alone. Each listing reinforces the other's credibility.</div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">02</div>
+        <div class="int-name">Lower cost-per-click</div>
+        <div class="int-desc">Google rewards sites with strong organic authority with lower CPCs in paid campaigns. SEO investment directly reduces the cost of every paid ad.</div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">03</div>
+        <div class="int-name">Retargeting amplification</div>
+        <div class="int-desc">Surgeons and reps who find the site through organic search or social become retargeting audiences. Paid ads then re-engage the people who already showed interest — dramatically improving conversion rates vs. cold traffic.</div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">04</div>
+        <div class="int-name">Social proof loop</div>
+        <div class="int-desc">Active LinkedIn content generates engagement signals that improve Google's trust assessment of the domain. Shares and reviews from content amplification feed paid ad Quality Scores.</div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">05</div>
+        <div class="int-name">Faster SEO ranking</div>
+        <div class="int-desc">Social shares and backlinks from amplified content accelerate organic ranking timelines. A clinical article shared by Dr. Courtney on LinkedIn earns links that help it rank months faster than unpromoted content.</div>
+      </div>
+
+      <div class="int-card">
+        <div class="int-num">06</div>
+        <div class="int-name">Compounding returns</div>
+        <div class="int-desc">Every month of combined activity builds on the last. Paid produces leads immediately. SEO builds authority that compounds. Social keeps the audience warm between touchpoints. The system after month 6 produces multiples of what any single channel would on the same budget.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 04 BUYER JOURNEY MAPS -->
+  <div class="journey-section">
+    <div class="journey-section-label">Buyer Journey Maps</div>
+    <p class="journey-section-sub">Each buyer type follows a distinct path to decision. The three-channel system is designed to cover every stage of all three journeys simultaneously.</p>
+
+    <!-- HIGH-LEVEL STATS ROW -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
+      <div style="background:#ffffff;border:1px solid #d4ddd0;border-top:3px solid #C9AF71;border-radius:8px;padding:20px 18px;text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4a7c59;margin-bottom:10px;">The Spine Surgeon</div>
+        <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#8B6914;line-height:1;margin-bottom:4px;">6</div>
+        <div style="font-size:11.5px;color:#6B7E6D;margin-bottom:14px;">decision stages covered</div>
+        <div style="font-size:12.5px;color:#3D4F3F;line-height:1.5;text-align:left;border-top:1px solid #d4ddd0;padding-top:12px;">
+          <strong style="color:#0B2210;">Primary trigger:</strong> Peer referral or conference<br>
+          <strong style="color:#0B2210;">Decision driver:</strong> Clinical data + rep trust<br>
+          <strong style="color:#0B2210;">Conversion moment:</strong> Cadaver lab trial<br>
+          <strong style="color:#0B2210;">Key channel:</strong> LinkedIn + Surgical Video
+        </div>
+      </div>
+      <div style="background:#ffffff;border:1px solid #d4ddd0;border-top:3px solid #b2ceb2;border-radius:8px;padding:20px 18px;text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4a7c59;margin-bottom:10px;">The Sales Rep</div>
+        <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#8B6914;line-height:1;margin-bottom:4px;">6</div>
+        <div style="font-size:11.5px;color:#6B7E6D;margin-bottom:14px;">decision stages covered</div>
+        <div style="font-size:12.5px;color:#3D4F3F;line-height:1.5;text-align:left;border-top:1px solid #d4ddd0;padding-top:12px;">
+          <strong style="color:#0B2210;">Primary trigger:</strong> LinkedIn ad or post<br>
+          <strong style="color:#0B2210;">Decision driver:</strong> Innovation story + supply reliability<br>
+          <strong style="color:#0B2210;">Conversion moment:</strong> Distributor landing page<br>
+          <strong style="color:#0B2210;">Key channel:</strong> LinkedIn Ads + SEO
+        </div>
+      </div>
+      <div style="background:#ffffff;border:1px solid #d4ddd0;border-top:3px solid #8d928a;border-radius:8px;padding:20px 18px;text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4a7c59;margin-bottom:10px;">The ASC Administrator</div>
+        <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#8B6914;line-height:1;margin-bottom:4px;">5</div>
+        <div style="font-size:11.5px;color:#6B7E6D;margin-bottom:14px;">decision stages covered</div>
+        <div style="font-size:12.5px;color:#3D4F3F;line-height:1.5;text-align:left;border-top:1px solid #d4ddd0;padding-top:12px;">
+          <strong style="color:#0B2210;">Primary trigger:</strong> Budget pressure or surgeon mention<br>
+          <strong style="color:#0B2210;">Decision driver:</strong> Cost + portfolio + supply reliability<br>
+          <strong style="color:#0B2210;">Conversion moment:</strong> ASC Value Kit download<br>
+          <strong style="color:#0B2210;">Key channel:</strong> LinkedIn Ads + SEO content
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS: CONDENSED JOURNEY VIEW -->
+    <div class="journey-tabs">
+      <button class="jtab-btn active" data-jtab="surgeon">The Spine Surgeon</button>
+      <button class="jtab-btn" data-jtab="rep">The Sales Rep</button>
+      <button class="jtab-btn" data-jtab="asc">The ASC Administrator</button>
+    </div>
+
+    <!-- SURGEON -->
+    <div id="jtab-surgeon" class="jtab-panel active">
+      <div class="journey-intro">From "never heard of them" → to "approved for trial case"</div>
+      <table class="journey-table">
+        <thead>
+          <tr><th style="width:42%;">Journey Stage</th><th style="width:19%;text-align:center;">Paid Ads</th><th style="width:19%;text-align:center;">Organic SEO</th><th style="width:20%;text-align:center;">Social</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Awareness — hears the name at conference or from rep</td><td class="jc-partial">◐</td><td class="jc-partial">◐</td><td class="jc-strong">✓</td></tr>
+          <tr><td>Research — Googles "Eminent Spine" or "3D pedicle screw"</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td></tr>
+          <tr><td>Validation — FDA clearance, clinical data, peer use</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td></tr>
+          <tr><td>Evaluation — compares vendors, asks rep for trial</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td></tr>
+          <tr><td>Trial — requests samples or cadaver lab invitation</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-none">–</td></tr>
+          <tr><td>Advocacy — tells peers, generates word-of-mouth</td><td class="jc-none">–</td><td class="jc-none">–</td><td class="jc-strong">✓</td></tr>
+        </tbody>
+      </table>
+      <div class="journey-key"><span class="jc-strong">✓</span> Strong &nbsp; <span class="jc-partial">◐</span> Partial &nbsp; <span class="jc-none">–</span> Minimal</div>
+      <div class="journey-callout">
+        <div class="journey-callout-label">Strategy</div>
+        Surgical video + clinical articles (SEO) → LinkedIn thought leadership from Dr. Courtney (Social) → Retargeted LinkedIn ads to surgeons who engaged (Paid). Digital creates the awareness and credibility. The rep closes in the OR.
+      </div>
+    </div>
+
+    <!-- REP -->
+    <div id="jtab-rep" class="jtab-panel">
+      <div class="journey-intro">From "evaluating new lines to carry" → to "signed distribution agreement"</div>
+      <table class="journey-table">
+        <thead>
+          <tr><th style="width:42%;">Journey Stage</th><th style="width:19%;text-align:center;">Paid Ads</th><th style="width:19%;text-align:center;">Organic SEO</th><th style="width:20%;text-align:center;">Social</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Discovery — sees LinkedIn post or ad about distributor opportunity</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td><td class="jc-strong">✓</td></tr>
+          <tr><td>Research — Googles company, checks catalog and FDA clearances</td><td class="jc-partial">◐</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td></tr>
+          <tr><td>Validation — innovation story, supply reliability, commission structure</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td></tr>
+          <tr><td>Evaluation — compares to other lines being considered</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td></tr>
+          <tr><td>Application — visits distributor landing page, submits inquiry</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-none">–</td></tr>
+          <tr><td>Retention — stays engaged, sells with confidence in the OR</td><td class="jc-none">–</td><td class="jc-none">–</td><td class="jc-strong">✓</td></tr>
+        </tbody>
+      </table>
+      <div class="journey-key"><span class="jc-strong">✓</span> Strong &nbsp; <span class="jc-partial">◐</span> Partial &nbsp; <span class="jc-none">–</span> Minimal</div>
+      <div class="journey-callout">
+        <div class="journey-callout-label">Strategy</div>
+        LinkedIn ads targeting spine reps by title and seniority (Paid) → SEO-optimized distributor landing page with clear application pathway (SEO) → LinkedIn content giving reps the door-opener: "World's first 3D pedicle screw. Texas warehouse. No surprises." (Social)
+      </div>
+    </div>
+
+    <!-- ASC ADMIN -->
+    <div id="jtab-asc" class="jtab-panel">
+      <div class="journey-intro">From "need to reduce implant spend" → to "new vendor on formulary"</div>
+      <table class="journey-table">
+        <thead>
+          <tr><th style="width:42%;">Journey Stage</th><th style="width:19%;text-align:center;">Paid Ads</th><th style="width:19%;text-align:center;">Organic SEO</th><th style="width:20%;text-align:center;">Social</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Trigger — surgeon mentions product or budget pressure creates urgency</td><td class="jc-partial">◐</td><td class="jc-partial">◐</td><td class="jc-strong">✓</td></tr>
+          <tr><td>Research — Googles "value spine implant vendor", "full portfolio FDA cleared"</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-none">–</td></tr>
+          <tr><td>Validation — peer ASC references, pricing transparency, supply reliability</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-partial">◐</td></tr>
+          <tr><td>Evaluation — cost comparison, contacts rep or manufacturer directly</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-none">–</td></tr>
+          <tr><td>Approval — downloads formulary docs, schedules trial case</td><td class="jc-strong">✓</td><td class="jc-strong">✓</td><td class="jc-none">–</td></tr>
+        </tbody>
+      </table>
+      <div class="journey-key"><span class="jc-strong">✓</span> Strong &nbsp; <span class="jc-partial">◐</span> Partial &nbsp; <span class="jc-none">–</span> Minimal</div>
+      <div class="journey-callout">
+        <div class="journey-callout-label">Strategy</div>
+        LinkedIn ads targeting ASC Administrators and Materials Managers by title (Paid) → SEO content for procurement searches — "FDA cleared spine full portfolio", "per-case implant cost" (SEO) → Rep-delivered ASC Value Kit complements everything found online (offline conversion). The ASC is the fastest-growing channel in spine surgery and the least-marketed-to audience Eminent Spine has.
+      </div>
+    </div>
+
+  </div><!-- /journey-section -->
+
+<!-- 05 COMPOUND MATH -->
+  <div class="compound-section">
+    <div class="compound-label">The Compound Math</div>
+    <div class="compound-grid">
+
+      <div class="compound-card" style="background:#ffffff;border:1px solid #d4ddd0;">
+        <div class="compound-card-label" style="color:#c3c8bf;">Scenario A — Single Channel Only</div>
+        <div class="compound-card-headline">LinkedIn paid ads, no SEO, no social</div>
+        <table class="compound-table">
+          <thead>
+            <tr><th>Source</th><th>Monthly Inquiries (est.)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>LinkedIn paid ads</td><td>3–6</td></tr>
+            <tr><td>Organic SEO</td><td><span style="color:#9E93B8;">0 — not yet ranked</span></td></tr>
+            <tr><td>Social / retargeting</td><td><span style="color:#9E93B8;">0 — no audience built</span></td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td><strong>Total</strong></td><td><strong>3–6</strong></td></tr>
+          </tfoot>
+        </table>
+        <div class="compound-footer">Ceases entirely if spend pauses. No compounding. No asset built. Rep and surgeon inquiries stop the day budget stops.</div>
+      </div>
+
+      <div class="compound-card" style="background:#EBF4EE;border:1px solid #C9AF71;border-top:3px solid #C9AF71;position:relative;">
+        <div class="compound-recommended">Recommended</div>
+        <div class="compound-card-label" style="color:#dfc484;">Scenario B — All Three Channels (Month 6+)</div>
+        <div class="compound-card-headline">Paid + SEO + social, mature state</div>
+        <table class="compound-table">
+          <thead>
+            <tr><th>Source</th><th>Monthly Inquiries (est.)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Paid ads (same budget, lower CPC from SEO lift)</td><td style="color:#7A5A00;font-weight:600;">8–14</td></tr>
+            <tr><td>Organic SEO — clinical + distributor keywords</td><td style="color:#7A5A00;font-weight:600;">8–16 <span style="font-size:11px;font-weight:400;color:#6B7E6D;">(zero incremental spend)</span></td></tr>
+            <tr><td>Social-referred traffic + retargeting</td><td style="color:#7A5A00;font-weight:600;">4–8</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td><strong style="color:#0B2210;">Total</strong></td><td><strong style="color:#8B6914;font-size:18px;">20–38</strong></td></tr>
+          </tfoot>
+        </table>
+        <div class="compound-footer">Organic portion persists even if ad spend pauses. The system compounds — each month builds on the last.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 06 QUICK REFERENCE TABLE -->
+  <div class="qr-section">
+    <div class="qr-label">Channel Quick Reference</div>
+    <div style="overflow-x:auto;">
+    <table class="qr-table">
+      <thead>
+        <tr>
+          <th>Channel</th>
+          <th>Time to Leads</th>
+          <th>Persists?</th>
+          <th>Compounds?</th>
+          <th>Strongest For</th>
+          <th>Long-Term ROI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Search Ads</strong></td>
+          <td>Day 1</td>
+          <td><span class="qr-no">✗ Stops</span></td>
+          <td><span class="qr-no">✗ No</span></td>
+          <td>High-intent search capture — reps searching "spine implant distributor"</td>
+          <td>~$0.78 per $1</td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn Ads</strong></td>
+          <td>1–2 weeks</td>
+          <td><span class="qr-no">✗ Stops</span> <span style="color:#8d928a;font-size:11px;">(audience data persists)</span></td>
+          <td><span style="color:#C9AF71;font-weight:600;">◐ Partial</span></td>
+          <td>Surgeon + rep awareness, job-title targeting, conference amplification</td>
+          <td>$1.13 per $1</td>
+        </tr>
+        <tr>
+          <td><strong>Organic SEO</strong></td>
+          <td>4–9 months</td>
+          <td><span class="qr-yes">✓ Rankings hold</span></td>
+          <td><span class="qr-yes">✓ Strongly</span></td>
+          <td>Research-phase validation — Googling "3D pedicle screw 510k cleared"</td>
+          <td><span style="color:#b2ceb2;font-weight:600;">748% avg ROI</span></td>
+        </tr>
+        <tr>
+          <td><strong>Organic Social (LinkedIn)</strong></td>
+          <td>Ongoing</td>
+          <td><span class="qr-yes">✓ Followers + content remain</span></td>
+          <td><span class="qr-yes">✓ Slowly</span></td>
+          <td>Surgeon trust-building, rep community, Dr. Courtney thought leadership</td>
+          <td>Trust + retargeting fuel</td>
+        </tr>
+        <tr class="qr-highlight">
+          <td><strong style="color:#8B6914;">All Three Combined</strong></td>
+          <td>Paid: Day 1 · Organic: Month 4+</td>
+          <td><span class="qr-yes">✓ Organic assets persist</span></td>
+          <td><span class="qr-yes">✓ Each channel strengthens the others</span></td>
+          <td>Every stage — every buyer, every moment</td>
+          <td><strong style="color:#8B6914;">+47% volume vs. single channel</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- 07 SUPERSYMM INTELLIGENCE -->
+  <div class="connects-ss-badge">
+    <div class="connects-ss-header">
+      <span class="connects-ss-pre">Powered by</span>
+      <span class="connects-ss-label">SuperSymm Intelligence</span>
+    </div>
+    <p>No competitor in the small-cap spine manufacturer tier is running a coordinated paid + SEO + social program. The bar for digital channel integration in this segment is on the floor. First-mover digital advantage is achievable quickly — and it compounds with every month it's built before competitors act.</p>
+    <p style="margin-bottom:0;">The 3D pedicle screw story, the Texas manufacturing advantage, the surgeon-founder credibility — none of these differentiated assets are reaching the surgeons, reps, and ASC administrators who are searching for exactly what Eminent Spine has built. That is the gap. This system closes it.</p>
+  </div>
+
+  <!-- SOURCES -->
+  <p class="connects-sources">Sources: LinkedIn B2B Benchmark 2025 · Swydo B2B Ad ROI Data 2025 · SeoProfy B2B SEO Statistics 2026 · HubSpot State of Marketing 2025 · WebFX Healthcare Marketing Benchmarks 2026 · Healthcare Sales Association Deal Cycle Study 2024 · Search Engine Land Medical Device SEO Case Study 2026</p>
+
+</div><!-- /wrap-dark -->
+</div><!-- /tab-connects -->
+
 
 <div id="tab-seo" class="tab-panel">
 
